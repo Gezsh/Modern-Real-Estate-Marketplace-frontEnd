@@ -13,7 +13,8 @@ import Search from './pages/Search'
 import axios from 'axios'
 
 const App = () => {
-  axios.defaults.baseURL='https://modern-real-estate-marketplace-1.onrender.com'
+  axios.defaults.baseURL = '/api'; // Assuming your proxy forwards requests to '/api' path
+  axios.defaults.withCredentials = true;
   return (
     <BrowserRouter>
     <Header/>
