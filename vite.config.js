@@ -8,7 +8,7 @@ export default defineConfig({
       '/api':{
         target:'https://modern-real-estate-marketplace-1.onrender.com',
         secure:false,
-        changeOrigin: true,
+    
       },
     },
   },
