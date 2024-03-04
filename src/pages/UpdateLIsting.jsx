@@ -150,7 +150,7 @@ function UpdateLIsting() {
     const fetchListing=async()=>{
      const listingId=params.listingId;
     
-    await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListing/${listingId}`)
+    await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListing/${listingId}`,{withCredentials: true})
             .then(response=>{
                
                 setFormData(response.data)
@@ -289,7 +289,7 @@ function UpdateLIsting() {
         if(+formData.regularPrice < +formData.discountPrice) return setError("discount price must be lower than regular price")
           setLoading(true)
           setError(false)
-          axios.patch(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/update/${params.listingId}`,{...formData, UserRef : currentUser._id})
+          axios.patch(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/update/${params.listingId}`,{...formData, UserRef : currentUser._id},{withCredentials: true})
                 .then(response=>{
                    console.log('list-response', response.data)
                     navigate(`/listing/${params.listingId}`)

@@ -52,7 +52,7 @@ export default function Search() {
       setLoading(true);
       setShowMore(false);
       const searchQuery = urlParams.toString();
-      const res = await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListings?${searchQuery}`);
+      const res = await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListings?${searchQuery}`,{withCredentials: true});
     
       if (res.data.length > 8) {
         setShowMore(true);
