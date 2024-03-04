@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const res = await axios.get('/api/listing/getListings?offer=true&limit=4');
+        const res = await axios.get('https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListings?offer=true&limit=4');
       
         setOfferListings(res.data);
         fetchRentListings(); // Trigger fetching of rent listings after setting offer listings
@@ -29,7 +29,7 @@ const Home = () => {
     };
     const fetchRentListings = async () => {
       try {
-        const res = await axios.get('/api/listing/getListings?type=rent&limit=4');
+        const res = await axios.get('https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListings?type=rent&limit=4');
        
         setRentListings(res.data);
         fetchSaleListings();
@@ -40,7 +40,7 @@ const Home = () => {
 
     const fetchSaleListings = async () => {
       try {
-        const res = await axios.get('/api/listing/getListings?type=sale&limit=4');
+        const res = await axios.get('https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListings?type=sale&limit=4');
       
         setSaleListings(res.data);
       } catch (error) {
