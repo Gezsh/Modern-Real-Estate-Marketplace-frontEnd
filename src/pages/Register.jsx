@@ -60,7 +60,7 @@ const Register = () => {
       e.preventDefault();
         setError('');
         setIsloading(true);
-         axios.post('/api/auth/signup',{username,email,password})
+         axios.post('https://modern-real-estate-marketplace-1.onrender.com/api/auth/signup',{username,email,password})
                       .then(response=>{
                        console.log(response.data);
                        setError('');

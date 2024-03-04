@@ -280,7 +280,7 @@ function CreateListing() {
         if(+formData.regularPrice < +formData.discountPrice) return setError("discount price must be lower than regular price")
           setLoading(true)
           setError(false)
-          axios.post('/api/listing/create',{...formData, UserRef : currentUser._id})
+          axios.post('https://modern-real-estate-marketplace-1.onrender.com/api/listing/create',{...formData, UserRef : currentUser._id})
                 .then(response=>{
                    console.log('list-response', response.data)
                    navigate(`/listing/${response.data._id}`)

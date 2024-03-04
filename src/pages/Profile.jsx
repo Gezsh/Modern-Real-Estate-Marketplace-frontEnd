@@ -147,7 +147,7 @@ const Profile = () => {
   const handleDelete=(e)=>{
     e.preventDefault()
      dispatch(deleteUserStart())
-    axios.delete(`/api/user/delete/${currentUser?._id}`)
+    axios.delete(`https://modern-real-estate-marketplace-1.onrender.com/api/user/delete/${currentUser?._id}`)
                 .then(response=>{
 
                   console.log('delete response',response.data)
@@ -163,7 +163,7 @@ const Profile = () => {
   const handleSignOut=(e)=>{
     e.preventDefault()
     dispatch(signOutUserStart())
-      axios.get('/api/auth/signOut')
+      axios.get('https://modern-real-estate-marketplace-1.onrender.com/api/auth/signOut')
              .then(response=>{
                  console.log(response.log),
                  dispatch(signOutUserSuccess(response.data))
@@ -182,7 +182,7 @@ const Profile = () => {
        e.preventDefault()
     
        dispatch(updateUserStart());
-       axios.patch(`/api/user/update/${currentUser._id}`,formData)
+       axios.patch(`https://modern-real-estate-marketplace-1.onrender.com/api/user/update/${currentUser._id}`,formData)
                   .then(response=>{
                       
                       
@@ -201,7 +201,7 @@ const Profile = () => {
   const handleShowClick=async()=>{
        try{
         setShowListingError(false)
-      axios.get(`/api/user/listing/${currentUser?._id}`)
+      axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/user/listing/${currentUser?._id}`)
          .then(response=>{
          
           
@@ -217,7 +217,7 @@ const Profile = () => {
 
   const handleDeleteListing=async(listingId)=>{
        try{
-              axios.delete(`/api/listing/delete/${listingId}`)
+              axios.delete(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/delete/${listingId}`)
                           .then(response=>{
                               console.log(response.data)
                              setUserListing ((prev)=>prev.filter((listing)=>listing._id !== listingId))

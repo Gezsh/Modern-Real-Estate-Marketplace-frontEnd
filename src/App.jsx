@@ -10,13 +10,13 @@ import CreateListing from './pages/CreateListing'
 import UpdateLIsting from './pages/UpdateLIsting'
 import Listing from './pages/Listing'
 import Search from './pages/Search'
-import axios from 'axios'
+// import axios from 'axios'
 
 const App = () => {
   // axios.defaults.baseURL = '/api'; // Assuming your proxy forwards requests to '/api' path
   // axios.defaults.withCredentials = true;
 
-  axios.defaults.baseURL='https://modern-real-estate-marketplace-1.onrender.com'
+  // axios.defaults.baseURL='https://modern-real-estate-marketplace-1.onrender.com'
   return (
     <BrowserRouter>
     <Header/>

@@ -40,7 +40,7 @@ const Listing = () => {
          const fetchListing=async()=>{
             try{
                 setLoading(true)
-               await axios.get(`/api/listing/getListing/${params.listingId}`)
+               await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListing/${params.listingId}`)
                   .then(response=>{
                    
                     setListing(response.data)

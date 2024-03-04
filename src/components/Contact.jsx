@@ -12,7 +12,7 @@ const Contact = ({listing}) => {
 
   useEffect(()=>{
        const fetchLandlord=async()=>{
-          await axios.get(`/api/user/${listing.UserRef}`)
+          await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/user/${listing.UserRef}`)
                     .then(response=>{
                         setLandlord(response.data)
                         console.log(landlord.username)
