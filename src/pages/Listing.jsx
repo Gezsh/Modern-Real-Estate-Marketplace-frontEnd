@@ -40,7 +40,7 @@ const Listing = () => {
          const fetchListing=async()=>{
             try{
                 setLoading(true)
-               await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListing/${params.listingId}`,{withCredentials: true})
+               await axios.get(`https://modern-real-estate-marketplace-1.onrender.com/api/listing/getListing/${params.listingId}`)
                   .then(response=>{
                    
                     setListing(response.data)
@@ -56,6 +56,7 @@ const Listing = () => {
                   })
             }catch(error){
                 setError(error.message)
+                setLoading(false)
             }
             
          }
@@ -67,7 +68,7 @@ const Listing = () => {
         {error && <p style={{textAlign:"center",fontSize:"24px",marginTop:"20px",color:"#b91c1c"}}>Something went wrong...</p>}
 
         {listing && !loading && !error && listing.imageUrls  &&(
-
+                
            <div>
 
               <Swiper navigation>
