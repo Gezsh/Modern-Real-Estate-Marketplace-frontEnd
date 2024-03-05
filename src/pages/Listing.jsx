@@ -15,7 +15,7 @@ import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined';
 import {useSelector} from 'react-redux'
 import Contact from "../components/Contact"
 
-const Main =style.div`
+const Main =style.div `
     
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
   width:100%;
