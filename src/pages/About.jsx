@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 const Wrapper =styled.div`
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
-  width:31rem;
+  width:100%;
   justify-content:flex-start;
- 
+  font-size:1rem;
+
   margin-left:5px;
   margin-right:5px;
 }

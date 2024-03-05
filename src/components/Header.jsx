@@ -10,7 +10,7 @@ const HeaderContainer=style.div`
 
    @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
     width: 100%; 
- 
+   
 
   }
   
@@ -55,7 +55,8 @@ const Form=style.form`
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
     margin-left:0;
-  
+    margin-right:0;
+    
   }
 
 `
@@ -68,9 +69,9 @@ const Search=style.input`
   }
  
   @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
-    width:16rem;
+    width:90px;
     font-size:1.2rem;
-  
+    font-size:1rem;
   }
 
 `
@@ -80,7 +81,7 @@ const ListContainer=style.ul`
   gap:1rem;
   @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
    gap:0.5rem;
-   font-size:1.2rem;
+   font-size:1rem;
   }
  
 `
