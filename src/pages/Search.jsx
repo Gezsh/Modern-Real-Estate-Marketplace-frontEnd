@@ -59,7 +59,7 @@ export default function Search() {
       } else {
         setShowMore(false);
       }
-      setListings(data);
+      setListings(res.data);
       setLoading(false);
     };
 
@@ -125,7 +125,7 @@ export default function Search() {
     if (res.data?.length < 9) {
       setShowMore(false);
     }
-    setListings([...listings, ...data]);
+    setListings([...listings, ...res.data]);
   };
   return (
     <div className='flex flex-col md:flex-row'>
